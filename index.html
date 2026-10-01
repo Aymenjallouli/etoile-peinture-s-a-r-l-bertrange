@@ -1,0 +1,972 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Etoile Peinture, peintre en bâtiment à Bettembourg</title>
+<meta name="description" content="Etoile Peinture, peintre en bâtiment à Bettembourg (Luxembourg) : peinture, revêtements muraux et sols, faux plafonds, rénovation. 5,0 sur 24 avis Google.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_LU">
+<meta property="og:title" content="Etoile Peinture, peintre en bâtiment à Bettembourg">
+<meta property="og:description" content="Peinture, murs, sols, faux plafonds et rénovation. Noté 5,0 sur 24 avis Google. 20 rue Marie-Thérèse, Bettembourg.">
+<meta name="theme-color" content="#1B2C4E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231B2C4E'/%3E%3Cpath d='M32 9l6.9 14.6 16 1.9-11.8 11 3.1 15.8L32 44.4l-14.2 7.9 3.1-15.8-11.8-11 16-1.9z' fill='%23F6C21C'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100,400;100,600;112,800&family=Instrument+Serif:ital@1&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HousePainter",
+  "name": "ETOILE PEINTURE S.A R.L.",
+  "alternateName": "Etoile Peinture",
+  "telephone": "+35226510847",
+  "email": "info@etoilepeinture.lu",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "20 Rue Marie-Thérèse",
+    "postalCode": "3257",
+    "addressLocality": "Bettembourg",
+    "addressCountry": "LU"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 49.5164143, "longitude": 6.1070906 },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "08:00",
+      "closes": "17:00"
+    }
+  ],
+  "hasMap": "https://www.google.com/maps/place/?q=place_id:ChIJLfPZQMw3lUcRNz0Bx_1ZPSM",
+  "foundingDate": "2017-01-10",
+  "vatID": "LU29311740",
+  "knowsAbout": ["Peinture intérieure et extérieure", "Revêtement mural", "Décoration", "Revêtement de sols", "Faux plafonds", "Travaux de rénovation"],
+  "sameAs": ["https://www.facebook.com/profile.php?id=100063022820261"]
+}
+</script>
+<style>
+/* ─────────────────────────────────────────────────────────────────────────────
+   ETOILE PEINTURE — design decisions
+   Palette  The ground is their own staircase photo: chalk-white walls, a greige
+            accent wall, oak treads. The voice is their logo: the yellow star and
+            the navy lettering of the business card. One strong colour move: the
+            reviews section is a full field of star yellow. Luxembourg red/blue
+            (the swoosh behind their star) appears only as a thin tricolour rule.
+   Type     Archivo ExtraBold at 112% width for display (heavy, wide caps like the
+            logo lettering), Archivo 400/600 for text. Instrument Serif italic is
+            reserved for customers' own words.
+   Hero     Typographic poster + the single usable photo, framed tall. A yellow
+            "roller pass" paints itself under "Cinq".
+   Rhythm   chalk hero → yellow proof → chalk services (paint-chip strip, stepped
+            like a staircase: du sol au plafond) → navy company band → chalk
+            hours/map → greige contact → navy footer.
+   Photos   01 used (05 is an exact duplicate). 02 Street View (blurred), 03 logo
+            and 04 business card (text) skipped.
+   ───────────────────────────────────────────────────────────────────────────── */
+:root {
+  --bg: #F6F3ED;
+  --surface: #FFFFFF;
+  --surface-2: #ECE6DB;
+  --ink: #121B2E;
+  --ink-soft: #4C5466;
+  --brand: #1B2C4E;
+  --brand-ink: #FFFFFF;
+  --accent: #F6C21C;
+  --accent-ink: #121B2E;
+  --line: #DAD3C6;
+  --line-dark: rgba(255, 255, 255, .16);
+  --on-dark-soft: #B3B9C5;
+  --star: #E2A600;
+  --open: #1E7A45;
+  --lux-red: #EF3340;
+  --lux-blue: #00A3E0;
+  --sw-chalk: #F1EDE5;
+  --sw-greige: #B8B2A4;
+  --sw-oak: #B37A3B;
+  --sw-sky: #5AAED8;
+
+  --font-sans: "Archivo", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-quote: "Instrument Serif", Georgia, "Times New Roman", serif;
+
+  --step--1: clamp(.875rem, .85rem + .12vw, .95rem);
+  --step-0: clamp(1rem, .95rem + .22vw, 1.125rem);
+  --step-1: clamp(1.15rem, 1.05rem + .45vw, 1.4rem);
+  --step-2: clamp(1.4rem, 1.2rem + .9vw, 1.95rem);
+  --step-3: clamp(1.75rem, 1.35rem + 1.7vw, 2.75rem);
+  --step-4: clamp(2.1rem, 1.5rem + 2.9vw, 4rem);
+  --step-5: clamp(2.55rem, 1.45rem + 5vw, 5.6rem);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+  --section: clamp(56px, 10vw, 128px);
+  --gutter: clamp(16px, 5vw, 40px);
+  --max: 1200px;
+  --header-h: 64px;
+
+  --r-sm: 10px;
+  --r-md: 20px;
+  --r-pill: 999px;
+  --shadow-1: 0 1px 2px rgba(18, 27, 46, .06), 0 2px 8px rgba(18, 27, 46, .06);
+  --shadow-2: 0 2px 4px rgba(18, 27, 46, .06), 0 14px 32px -10px rgba(18, 27, 46, .2);
+  --shadow-3: 0 4px 10px rgba(18, 27, 46, .08), 0 36px 72px -20px rgba(18, 27, 46, .35);
+
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  --dur-1: 200ms;
+  --dur-2: 420ms;
+  --dur-3: 700ms;
+}
+
+/* Base */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 8px); }
+html.lock { overflow: hidden; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--font-sans); font-size: var(--step-0); line-height: 1.6; font-weight: 400;
+  -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  padding-bottom: calc(64px + env(safe-area-inset-bottom));
+}
+img { display: block; max-width: 100%; height: auto; }
+svg { flex: none; }
+h1, h2, h3 {
+  margin: 0; font-weight: 800; font-stretch: 112%; line-height: 1.04;
+  letter-spacing: -.025em; text-wrap: balance;
+}
+p { margin: 0; text-wrap: pretty; }
+a { color: inherit; }
+strong { font-weight: 600; }
+ul, ol { list-style: none; margin: 0; padding: 0; }
+:focus-visible { outline: 3px solid var(--brand); outline-offset: 3px; border-radius: 4px; }
+.proof :focus-visible { outline-color: var(--ink); }
+.patron :focus-visible, .site-footer :focus-visible { outline-color: var(--accent); }
+
+.container { width: 100%; max-width: calc(var(--max) + 2 * var(--gutter)); margin-inline: auto; padding-inline: var(--gutter); }
+main > section { scroll-margin-top: calc(var(--header-h) + 8px); }
+.visually-hidden { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.skip {
+  position: absolute; left: var(--space-4); top: -80px; z-index: 100; padding: var(--space-3) var(--space-4);
+  background: var(--ink); color: #fff; border-radius: var(--r-sm); font-weight: 600; text-decoration: none;
+}
+.skip:focus { top: var(--space-3); }
+
+.kicker {
+  display: flex; align-items: center; gap: 10px;
+  font-size: var(--step--1); font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+  font-stretch: 100%; line-height: 1.3; color: var(--ink-soft);
+}
+.kicker::before { content: ""; width: 28px; height: 2px; background: currentColor; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 52px; padding: 0 var(--space-5); border-radius: var(--r-pill);
+  font-size: var(--step-0); font-weight: 600; line-height: 1.1; text-decoration: none; white-space: nowrap;
+  border: 2px solid transparent; cursor: pointer;
+  transition: transform var(--dur-1) var(--ease), background-color var(--dur-1) var(--ease), color var(--dur-1) var(--ease), box-shadow var(--dur-1) var(--ease);
+}
+.btn svg { width: 20px; height: 20px; }
+.btn:active { transform: translateY(1px); }
+.btn-primary { background: var(--brand); color: var(--brand-ink); box-shadow: var(--shadow-2); }
+.btn-primary:hover { background: var(--ink); transform: translateY(-1px); }
+.btn-ghost { border-color: var(--ink); color: var(--ink); }
+.btn-ghost:hover { background: var(--ink); color: var(--bg); }
+.btn-sm { min-height: 44px; padding: 0 18px; font-size: var(--step--1); }
+
+.stars { display: inline-flex; gap: 2px; color: var(--star); }
+.stars svg { width: 16px; height: 16px; }
+
+/* Header */
+.site-header {
+  position: sticky; top: 0; z-index: 60; background: var(--bg);
+  border-bottom: 1px solid transparent; transition: border-color var(--dur-1) var(--ease), box-shadow var(--dur-1) var(--ease);
+}
+.site-header.is-scrolled { border-bottom-color: var(--line); box-shadow: 0 6px 18px -12px rgba(18, 27, 46, .25); }
+.header-inner { height: var(--header-h); display: flex; align-items: center; gap: var(--space-3); }
+.wordmark {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 44px; margin-right: auto;
+  text-decoration: none; font-weight: 800; font-stretch: 112%; text-transform: uppercase;
+  font-size: 1.0625rem; letter-spacing: .01em; line-height: 1;
+}
+.wordmark svg { width: 28px; height: 28px; margin-top: -4px; }
+.nav-desktop { display: none; }
+.header-call { display: none; }
+.menu-btn {
+  width: 48px; height: 48px; margin-right: -6px; display: grid; place-items: center;
+  background: transparent; border: 0; color: var(--ink); cursor: pointer; border-radius: var(--r-sm);
+}
+.menu-btn span, .menu-btn span::before, .menu-btn span::after {
+  display: block; width: 24px; height: 2px; background: currentColor; border-radius: 2px;
+  transition: transform var(--dur-2) var(--ease), opacity var(--dur-1) var(--ease);
+}
+.menu-btn span { position: relative; }
+.menu-btn span::before, .menu-btn span::after { content: ""; position: absolute; left: 0; }
+.menu-btn span::before { transform: translateY(-7px); }
+.menu-btn span::after { transform: translateY(7px); }
+.menu-btn[aria-expanded="true"] span { background: transparent; }
+.menu-btn[aria-expanded="true"] span::before { transform: rotate(45deg); background: var(--ink); }
+.menu-btn[aria-expanded="true"] span::after { transform: rotate(-45deg); background: var(--ink); }
+
+.menu {
+  position: fixed; inset: var(--header-h) 0 0 0; z-index: 55; overflow-x: hidden; overflow-y: auto;
+  background: var(--bg); padding: var(--space-5) var(--gutter) calc(var(--space-6) + env(safe-area-inset-bottom));
+  display: flex; flex-direction: column;
+  opacity: 0; visibility: hidden; transform: translateY(-8px);
+  transition: opacity var(--dur-2) var(--ease), transform var(--dur-2) var(--ease), visibility 0s linear var(--dur-2);
+}
+.menu.is-open { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+.menu-link {
+  display: flex; align-items: center; justify-content: space-between; min-height: 64px;
+  border-bottom: 1px solid var(--line); text-decoration: none;
+  font-size: var(--step-3); font-weight: 800; font-stretch: 112%; letter-spacing: -.02em;
+}
+.menu-link svg { width: 24px; height: 24px; color: var(--ink-soft); }
+.menu-foot { margin-top: auto; padding-top: var(--space-6); display: grid; gap: var(--space-3); }
+.menu-foot .btn { width: 100%; min-width: 0; white-space: normal; overflow-wrap: anywhere; text-align: center; }
+
+/* Hero */
+.hero { position: relative; overflow: clip; padding: var(--space-5) 0 var(--section); isolation: isolate; }
+.hero-grid { display: grid; gap: var(--space-7); align-items: center; }
+.eyebrow {
+  display: flex; align-items: center; gap: 10px; font-size: var(--step--1); font-weight: 600;
+  letter-spacing: .01em; color: var(--ink-soft); line-height: 1.3;
+}
+.flag { width: 20px; height: 13px; border-radius: 2px; box-shadow: 0 0 0 1px var(--line); flex: none;
+  background: linear-gradient(var(--lux-red) 0 33.4%, #fff 0 66.6%, var(--lux-blue) 0); }
+.hero h1 { font-size: var(--step-5); margin-top: var(--space-4); }
+.hero h1 .l2 { display: block; }
+.stroke { position: relative; z-index: 0; background: none; color: inherit; padding: 0 .06em; margin: 0 -.06em; white-space: nowrap; }
+.stroke::before {
+  content: ""; position: absolute; z-index: -1; left: -.04em; right: -.08em; top: .2em; bottom: .02em;
+  background: var(--accent); border-radius: .14em .5em .2em .42em / .42em .18em .5em .24em;
+  transform: rotate(-1.6deg); transform-origin: left center;
+}
+.js .stroke::before { animation: roll var(--dur-3) var(--ease) .35s both; }
+@keyframes roll { from { transform: rotate(-1.6deg) scaleX(0); } to { transform: rotate(-1.6deg) scaleX(1); } }
+.lead { margin-top: var(--space-5); font-size: var(--step-1); line-height: 1.5; color: var(--ink-soft); max-width: 40ch; }
+.rating-chip {
+  display: inline-flex; align-items: center; gap: 10px; margin-top: var(--space-5); min-height: 44px;
+  padding: 6px 16px 6px 14px; border-radius: var(--r-pill); background: var(--surface);
+  border: 1px solid var(--line); box-shadow: var(--shadow-1); text-decoration: none;
+  font-size: var(--step--1); font-weight: 600; line-height: 1.2;
+  transition: box-shadow var(--dur-1) var(--ease), transform var(--dur-1) var(--ease);
+}
+.rating-chip:hover { box-shadow: var(--shadow-2); transform: translateY(-1px); }
+.rating-chip .sep { color: var(--ink-soft); font-weight: 400; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-5); }
+.hero-cta .btn { padding-inline: 20px; }
+.hero-cta .btn-primary { flex: 1 1 auto; max-width: 280px; }
+.status {
+  display: inline-flex; align-items: center; gap: 10px; font-size: var(--step--1); font-weight: 600; line-height: 1.3;
+}
+.status .dot { width: 9px; height: 9px; border-radius: 50%; background: #8A91A0; flex: none; }
+.status.is-open .dot { background: var(--open); box-shadow: 0 0 0 4px rgba(30, 122, 69, .16); }
+.hero .status { margin-top: var(--space-5); color: var(--ink-soft); }
+.hero-figure { position: relative; margin: 0; }
+.hero-figure img {
+  width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 62%;
+  border-radius: var(--r-md); box-shadow: var(--shadow-3); background: var(--surface-2);
+}
+.hero-star { position: absolute; z-index: -1; width: 46%; left: -9%; bottom: -10%; color: var(--accent); transform: rotate(-10deg); }
+
+/* Proof */
+.proof { background: var(--accent); color: var(--accent-ink); padding-block: var(--section) calc(var(--section) - var(--space-6)); overflow: clip; }
+.proof .kicker { color: var(--ink); }
+.proof-grid { display: grid; gap: var(--space-7); align-items: end; }
+.score-num {
+  margin-top: var(--space-4); font-weight: 800; font-stretch: 112%;
+  font-size: clamp(7.5rem, 4.5rem + 16vw, 15rem); line-height: .8; letter-spacing: -.06em;
+  font-variant-numeric: tabular-nums;
+}
+.score .stars { color: var(--ink); margin-top: var(--space-5); gap: 4px; }
+.score .stars svg { width: 26px; height: 26px; }
+.score-meta { margin-top: var(--space-3); font-size: var(--step-1); line-height: 1.4; }
+.score-meta strong { font-variant-numeric: tabular-nums; }
+.link-arrow {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-top: var(--space-2);
+  font-weight: 600; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 5px;
+}
+.link-arrow svg { width: 18px; height: 18px; transition: transform var(--dur-1) var(--ease); }
+.link-arrow:hover svg { transform: translate(2px, -2px); }
+.featured { margin: 0; }
+.featured blockquote { margin: 0; }
+.featured p {
+  font-family: var(--font-quote); font-style: italic; font-weight: 400;
+  font-size: var(--step-4); line-height: 1.04; letter-spacing: -.01em; text-wrap: balance;
+}
+.featured figcaption { margin-top: var(--space-5); display: flex; align-items: center; gap: var(--space-3); font-weight: 600; flex-wrap: wrap; }
+.featured figcaption .stars { color: var(--ink); }
+
+.rail-head { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--space-4); margin-top: var(--space-8); }
+.rail-head h3 { font-size: var(--step-2); }
+.rail-head p { margin-top: var(--space-2); }
+.rail-nav { display: flex; gap: var(--space-2); }
+.rail-nav button {
+  width: 48px; height: 48px; display: grid; place-items: center; cursor: pointer;
+  border-radius: 50%; border: 2px solid var(--ink); background: transparent; color: var(--ink);
+  transition: background-color var(--dur-1) var(--ease), color var(--dur-1) var(--ease), opacity var(--dur-1) var(--ease);
+}
+.rail-nav button:hover:not(:disabled) { background: var(--ink); color: var(--accent); }
+.rail-nav button:disabled { opacity: .3; cursor: default; }
+.rail-nav svg { width: 20px; height: 20px; }
+.rail {
+  display: grid; grid-auto-flow: column; grid-auto-columns: min(86%, 380px); gap: var(--space-4); align-items: start;
+  margin-top: var(--space-5); padding: var(--space-2) max(var(--gutter), calc((100% - var(--max)) / 2)) var(--space-6);
+  scroll-padding-inline: max(var(--gutter), calc((100% - var(--max)) / 2));
+  overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; scrollbar-width: none;
+}
+.rail::-webkit-scrollbar { display: none; }
+.review {
+  scroll-snap-align: start; display: flex; flex-direction: column; gap: var(--space-4);
+  background: var(--surface); border-radius: var(--r-md); padding: var(--space-6) var(--space-5); box-shadow: var(--shadow-2);
+}
+.review blockquote { margin: 0; }
+.review p { font-size: var(--step-0); line-height: 1.6; }
+.review-top { display: flex; align-items: center; justify-content: space-between; gap: var(--space-3); padding-bottom: var(--space-4); border-bottom: 1px solid var(--line); }
+.review-by { display: flex; align-items: center; gap: var(--space-3); font-weight: 600; line-height: 1.3; }
+.review-by time { display: block; font-weight: 400; font-size: var(--step--1); color: var(--ink-soft); }
+.avatar { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--brand); color: var(--brand-ink); font-weight: 600; flex: none; }
+
+/* Services: the paint-chip strip */
+.services { padding-block: var(--section); }
+.section-head { display: grid; gap: var(--space-4); max-width: 680px; }
+.section-head h2 { font-size: var(--step-4); }
+.section-head p:not(.kicker) { font-size: var(--step-1); line-height: 1.5; color: var(--ink-soft); }
+.chips { display: grid; gap: var(--space-3); margin-top: var(--space-7); }
+.chip {
+  display: grid; grid-template-columns: 92px 1fr; min-height: 136px; overflow: hidden;
+  background: var(--surface); border-radius: var(--r-md); box-shadow: var(--shadow-1);
+}
+.chip-swatch {
+  display: flex; flex-direction: column; justify-content: space-between; gap: var(--space-2);
+  padding: var(--space-3); background: var(--sw); color: var(--ink);
+  font-size: .8125rem; font-weight: 600; line-height: 1.2; letter-spacing: .02em;
+}
+.chip-swatch .no { font-variant-numeric: tabular-nums; }
+.chip--chalk { --sw: var(--sw-chalk); }
+.chip--chalk .chip-swatch { box-shadow: inset -1px 0 0 var(--line); }
+.chip--greige { --sw: var(--sw-greige); }
+.chip--star { --sw: var(--accent); }
+.chip--oak { --sw: var(--sw-oak); }
+.chip--sky { --sw: var(--sw-sky); }
+.chip--navy { --sw: var(--brand); }
+.chip--navy .chip-swatch { color: var(--brand-ink); }
+.chip-body { display: grid; align-content: start; gap: var(--space-2); padding: var(--space-5); }
+.chip h3 { font-size: var(--step-1); line-height: 1.12; letter-spacing: -.015em; }
+.chip p { color: var(--ink-soft); }
+
+/* Company band */
+.patron { position: relative; overflow: clip; isolation: isolate; background: var(--brand); color: var(--brand-ink); padding-block: var(--section); }
+.patron .kicker { color: var(--on-dark-soft); }
+.patron-grid { display: grid; gap: var(--space-8); }
+.patron h2 { font-size: var(--step-4); margin-top: var(--space-4); }
+.patron .body { margin-top: var(--space-5); font-size: var(--step-1); line-height: 1.55; color: var(--on-dark-soft); max-width: 46ch; }
+.ledger { margin: var(--space-7) 0 0; border-top: 1px solid var(--line-dark); }
+.ledger div { display: grid; grid-template-columns: minmax(104px, 34%) 1fr; gap: var(--space-4); padding: var(--space-4) 0; border-bottom: 1px solid var(--line-dark); }
+.ledger dt { font-size: var(--step--1); font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--on-dark-soft); padding-top: 2px; }
+.ledger dd { margin: 0; font-weight: 600; }
+.big-quote { margin: 0; align-self: center; }
+.big-quote .qmark { display: block; width: 64px; height: 48px; color: var(--accent); }
+.big-quote blockquote { margin: var(--space-5) 0 0; }
+.big-quote p { font-family: var(--font-quote); font-style: italic; font-size: var(--step-3); line-height: 1.14; text-wrap: balance; }
+.big-quote figcaption { margin-top: var(--space-5); color: var(--on-dark-soft); font-weight: 600; }
+.patron-star { position: absolute; z-index: -1; width: min(120vw, 680px); right: -30vw; bottom: -12%; color: rgba(255, 255, 255, .05); transform: rotate(-12deg); }
+
+/* Hours + map */
+.visit { padding-block: var(--section); }
+.visit-grid { display: grid; gap: var(--space-7); }
+.visit h2 { font-size: var(--step-4); margin-top: var(--space-4); }
+.status-pill { margin-top: var(--space-5); min-height: 40px; padding: 6px 16px; border-radius: var(--r-pill); background: var(--surface); border: 1px solid var(--line); }
+.hours { width: 100%; margin-top: var(--space-5); border-collapse: collapse; font-variant-numeric: tabular-nums; }
+.hours th, .hours td { padding: 13px 12px; border-bottom: 1px solid var(--line); font-weight: 400; text-align: left; }
+.hours td { text-align: right; white-space: nowrap; }
+.hours tr:first-child th, .hours tr:first-child td { border-top: 1px solid var(--line); }
+.hours .closed td { color: var(--ink-soft); }
+.hours tr.is-today { background: var(--surface); }
+.hours tr.is-today th, .hours tr.is-today td { font-weight: 600; }
+.hours tr.is-today th { box-shadow: inset 4px 0 0 var(--accent); }
+.today-tag {
+  display: inline-block; margin-left: var(--space-2); padding: 1px 8px; border-radius: var(--r-pill);
+  background: var(--accent); color: var(--accent-ink); font-size: .75rem; font-weight: 600; letter-spacing: .04em; vertical-align: 2px;
+}
+.address { margin-top: var(--space-6); font-style: normal; font-size: var(--step-1); line-height: 1.45; }
+.address strong { display: block; }
+.visit-actions { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-5); }
+.map { display: grid; gap: var(--space-2); align-content: start; }
+.map-frame { position: relative; overflow: hidden; aspect-ratio: 4 / 3.4; border-radius: var(--r-md); background: var(--surface-2); box-shadow: var(--shadow-2); }
+.map-frame iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.map-fallback { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-weight: 600; font-size: var(--step--1); text-underline-offset: 4px; }
+.map-fallback svg { width: 16px; height: 16px; }
+
+/* Contact */
+.contact { background: var(--surface-2); padding-block: var(--section); }
+.contact-grid { display: grid; gap: var(--space-7); }
+.contact h2 { font-size: var(--step-4); margin-top: var(--space-4); }
+.contact .intro { margin-top: var(--space-5); font-size: var(--step-1); line-height: 1.5; color: var(--ink-soft); max-width: 42ch; }
+.big-phone {
+  display: inline-flex; align-items: center; gap: var(--space-3); margin-top: var(--space-6); min-height: 48px;
+  font-size: clamp(1.6rem, .7rem + 4.4vw, 3.25rem); font-weight: 800; letter-spacing: -.02em; line-height: 1.05;
+  text-decoration: none; font-variant-numeric: tabular-nums;
+  background: linear-gradient(var(--accent), var(--accent)) 0 92% / 0 .22em no-repeat;
+  transition: background-size var(--dur-2) var(--ease);
+}
+.big-phone:hover { background-size: 100% .22em; }
+.contact-lines { margin-top: var(--space-5); display: grid; gap: var(--space-1); }
+.contact-lines a {
+  display: inline-flex; align-items: center; gap: var(--space-3); min-height: 44px; width: fit-content; max-width: 100%;
+  font-weight: 600; text-decoration: underline; text-decoration-color: var(--line); text-decoration-thickness: 2px; text-underline-offset: 5px; overflow-wrap: anywhere;
+}
+.contact-lines a:hover { text-decoration-color: var(--ink); }
+.contact-lines svg { width: 22px; height: 22px; color: var(--ink-soft); }
+.mail-form { display: grid; gap: var(--space-4); padding: var(--space-6) var(--space-5); background: var(--surface); border-radius: var(--r-md); box-shadow: var(--shadow-2); align-self: start; }
+.mail-form h3 { font-size: var(--step-2); }
+.field { display: grid; gap: 6px; min-width: 0; }
+.contact-grid, .visit-grid, .patron-grid, .proof-grid, .hero-grid, .mail-form, .field-row { grid-template-columns: minmax(0, 1fr); }
+.field select { max-width: 100%; text-overflow: ellipsis; }
+.field label { font-size: var(--step--1); font-weight: 600; }
+.field .hint { font-size: var(--step--1); color: var(--ink-soft); margin-top: -4px; }
+.field input, .field select, .field textarea {
+  width: 100%; min-height: 50px; padding: 12px 14px; font: inherit; font-size: 1rem; color: var(--ink);
+  background: var(--bg); border: 1.5px solid var(--line); border-radius: var(--r-sm);
+  transition: border-color var(--dur-1) var(--ease), background-color var(--dur-1) var(--ease);
+}
+.field select { appearance: none; padding-right: 44px; cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23121B2E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 14px center; background-size: 18px; }
+.field textarea { min-height: 124px; resize: vertical; line-height: 1.5; }
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline: 3px solid var(--brand); outline-offset: 1px; border-color: var(--brand); background-color: var(--surface); }
+.field-row { display: grid; gap: var(--space-4); }
+.mail-form .btn { width: 100%; }
+.form-note { font-size: var(--step--1); color: var(--ink-soft); line-height: 1.45; }
+
+/* Footer */
+.site-footer { background: var(--ink); color: var(--on-dark-soft); padding-bottom: var(--space-7); }
+.tricolore { height: 9px; background: linear-gradient(var(--lux-red) 0 33.4%, #fff 0 66.6%, var(--lux-blue) 0); }
+.footer-grid { display: grid; gap: var(--space-6); padding-top: var(--space-8); }
+.site-footer .wordmark { color: #fff; font-size: 1.25rem; }
+.site-footer .wordmark svg { width: 32px; height: 32px; }
+.footer-tag { margin-top: var(--space-3); max-width: 32ch; }
+.footer-col h2 { font-size: var(--step--1); font-stretch: 100%; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: #fff; margin-bottom: var(--space-3); }
+.footer-col address { font-style: normal; line-height: 1.6; }
+.footer-col ul { display: grid; }
+.footer-col a { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; text-decoration: none; color: #fff; overflow-wrap: anywhere; }
+.footer-col a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.footer-col a svg { width: 20px; height: 20px; color: var(--accent); }
+.legal { margin-top: var(--space-7); padding-top: var(--space-5); border-top: 1px solid var(--line-dark); font-size: var(--step--1); display: grid; gap: var(--space-2); }
+
+/* Sticky action bar (phones) */
+.action-bar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 50;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  background: var(--surface); border-top: 1px solid var(--line);
+  padding-bottom: env(safe-area-inset-bottom); box-shadow: 0 -10px 28px -14px rgba(18, 27, 46, .3);
+}
+.action-bar a {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+  min-height: 60px; text-decoration: none; font-size: .875rem; font-weight: 600; line-height: 1.1;
+}
+.action-bar a + a { border-left: 1px solid var(--line); }
+.action-bar a:first-child { background: var(--brand); color: var(--brand-ink); }
+.action-bar svg { width: 22px; height: 22px; }
+
+/* Scroll reveal */
+.js .reveal { opacity: 0; transform: translateY(16px); transition: opacity var(--dur-3) var(--ease), transform var(--dur-3) var(--ease); }
+.js .reveal.is-in { opacity: 1; transform: none; }
+
+/* ≥ 640 */
+@media (min-width: 640px) {
+  .header-call { display: inline-flex; }
+  .eyebrow { letter-spacing: .1em; text-transform: uppercase; }
+  .chips { grid-template-columns: repeat(2, 1fr); }
+  .field-row { grid-template-columns: 1fr 1fr; }
+  .hero-figure { max-width: 520px; }
+}
+/* ≥ 768: header carries the CTA, no bottom bar */
+@media (min-width: 768px) {
+  body { padding-bottom: 0; }
+  .action-bar { display: none; }
+  .footer-grid { grid-template-columns: 1.4fr 1fr 1fr; }
+}
+/* ≥ 960 */
+@media (min-width: 960px) {
+  :root { --header-h: 76px; }
+  .menu-btn, .menu { display: none; }
+  .nav-desktop { display: flex; align-items: center; gap: var(--space-1); margin-right: var(--space-3); }
+  .nav-desktop a {
+    display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: var(--r-pill);
+    font-size: var(--step--1); font-weight: 600; text-decoration: none; transition: background-color var(--dur-1) var(--ease);
+  }
+  .nav-desktop a:hover { background: var(--surface-2); }
+  .hero { padding-top: var(--space-6); }
+  .hero-grid { grid-template-columns: minmax(0, 1.25fr) minmax(0, .75fr); gap: var(--space-8); min-height: calc(100svh - var(--header-h) - 2 * var(--space-6)); }
+  .hero-figure { max-width: none; }
+  .hero-figure img { max-height: calc(100svh - var(--header-h) - 96px); min-height: 460px; }
+  .hero-star { width: 62%; left: -22%; bottom: -13%; }
+  .proof-grid { grid-template-columns: auto minmax(0, 1fr); gap: var(--space-9); }
+  .featured { padding-bottom: var(--space-4); }
+  .chips { grid-template-columns: repeat(6, 1fr); align-items: start; gap: var(--space-3); margin-top: var(--space-8); }
+  .chip { display: flex; flex-direction: column; min-height: 0; }
+  .chip-swatch { height: 168px; padding: var(--space-4); }
+  .chip--navy .chip-swatch, .chip--chalk .chip-swatch { box-shadow: none; }
+  .chip--chalk .chip-swatch { box-shadow: inset 0 -1px 0 var(--line); }
+  .chip-body { padding: var(--space-4) var(--space-4) var(--space-5); }
+  .chip h3 { font-size: 1.125rem; }
+  .chip p { font-size: 1rem; line-height: 1.5; }
+  /* Rising left to right: du sol au plafond */
+  .chip:nth-child(1) { margin-top: 100px; }
+  .chip:nth-child(2) { margin-top: 80px; }
+  .chip:nth-child(3) { margin-top: 60px; }
+  .chip:nth-child(4) { margin-top: 40px; }
+  .chip:nth-child(5) { margin-top: 20px; }
+  .services .section-head { position: relative; }
+  .patron-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-9); align-items: center; }
+  .patron-star { right: max(-80px, calc((100vw - 1280px) / 2)); top: 50%; bottom: auto; translate: 0 -50%; }
+  .visit-grid { grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr); gap: var(--space-8); align-items: stretch; }
+  .map-frame { aspect-ratio: auto; height: 100%; min-height: 520px; }
+  .map { grid-template-rows: 1fr auto; }
+  .contact-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-9); align-items: start; }
+  .mail-form { padding: var(--space-7) var(--space-6); }
+}
+/* ≥ 1200 */
+@media (min-width: 1200px) {
+  .nav-desktop { gap: var(--space-2); margin-right: var(--space-4); }
+  .chip-swatch { height: 196px; }
+}
+
+@media (hover: none) {
+  .btn-primary:hover, .rating-chip:hover { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  .js .reveal { opacity: 1; transform: none; }
+}
+</style>
+<!--sf:preview--><meta name="robots" content="noindex, nofollow"><!--/sf:preview-->
+<!--sf:og--><meta property="og:image" content="https://etoile-peinture-s-a-r-l-bertrange.aymenjallouli.dev/og.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:url" content="https://etoile-peinture-s-a-r-l-bertrange.aymenjallouli.dev/"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://etoile-peinture-s-a-r-l-bertrange.aymenjallouli.dev/og.jpg"><!--/sf:og-->
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.4l2.95 6.24 6.85.82-5.05 4.7 1.33 6.78L12 17.56l-6.08 3.38 1.33-6.78-5.05-4.7 6.85-.82z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 4h3.2l1.6 4.2-2.1 1.4a11.5 11.5 0 0 0 6.7 6.7l1.4-2.1L20 15.8V19a1.8 1.8 0 0 1-1.9 1.8A16.5 16.5 0 0 1 3.2 5.9 1.8 1.8 0 0 1 5 4z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3.5 7l8.5 6 8.5-6"/></g></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.8l9.2 9.2-9.2 9.2L2.8 12z"/><path d="M9 14.5v-2a1.5 1.5 0 0 1 1.5-1.5H15"/><path d="M13 8.8l2.2 2.2-2.2 2.2"/></g></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-arrow-l" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M8.5 7H17v8.5"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M15.5 7.8h-1.6a2.4 2.4 0 0 0-2.4 2.4V21M9.2 13h5.6"/></g></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-6.8-6-6.8-11.2a6.8 6.8 0 0 1 13.6 0C18.8 15 12 21 12 21z"/><circle cx="12" cy="9.8" r="2.4"/></g></symbol>
+  <symbol id="i-logo-star" viewBox="0 0 32 32"><path fill="#F6C21C" stroke="#121B2E" stroke-width="1.6" stroke-linejoin="round" d="M16 2.2l4.1 8.7 9.5 1.15-7 6.55 1.85 9.4L16 23.3 7.55 28l1.85-9.4-7-6.55 9.5-1.15z"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="wordmark" href="#main" aria-label="Etoile Peinture, haut de page">
+      <span>Etoile</span><svg aria-hidden="true"><use href="#i-logo-star"/></svg><span>Peinture</span>
+    </a>
+    <nav class="nav-desktop" aria-label="Navigation principale">
+      <a href="#avis">Avis</a>
+      <a href="#travaux">Travaux</a>
+      <a href="#entreprise">L’entreprise</a>
+      <a href="#horaires">Horaires</a>
+      <a href="#contact">Devis</a>
+    </nav>
+    <a class="btn btn-primary btn-sm header-call" href="tel:+35226510847">
+      <svg aria-hidden="true"><use href="#i-phone"/></svg>26 51 08 47
+    </a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Ouvrir le menu"><span></span></button>
+  </div>
+</header>
+
+<div class="menu" id="menu" aria-label="Menu">
+  <nav aria-label="Navigation mobile">
+    <a class="menu-link" href="#avis">Avis <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <a class="menu-link" href="#travaux">Travaux <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <a class="menu-link" href="#entreprise">L’entreprise <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <a class="menu-link" href="#horaires">Horaires <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+    <a class="menu-link" href="#contact">Devis <svg aria-hidden="true"><use href="#i-arrow"/></svg></a>
+  </nav>
+  <div class="menu-foot">
+    <a class="btn btn-primary" href="tel:+35226510847"><svg aria-hidden="true"><use href="#i-phone"/></svg>+352 26 51 08 47</a>
+    <a class="btn btn-ghost" href="mailto:info@etoilepeinture.lu"><svg aria-hidden="true"><use href="#i-mail"/></svg>info@etoilepeinture.lu</a>
+  </div>
+</div>
+
+<main id="main">
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="flag" aria-hidden="true"></span>Peintre en bâtiment · Bettembourg</p>
+        <h1 id="hero-title">Une étoile dans le nom. <span class="l2"><mark class="stroke">Cinq</mark> dans les avis.</span></h1>
+        <p class="lead">Peinture, murs, sols, faux plafonds, rénovation. Nos clients retiennent deux choses&nbsp;: les délais tenus, et un patron qui vient contrôler le chantier.</p>
+        <a class="rating-chip" href="https://www.google.com/maps/place/?q=place_id:ChIJLfPZQMw3lUcRNz0Bx_1ZPSM" target="_blank" rel="noopener">
+          <span class="stars" aria-hidden="true"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+          <span>5,0 <span class="sep">·</span> 24 avis Google</span>
+        </a>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="tel:+35226510847" aria-label="Demander un devis par téléphone, 26 51 08 47"><svg aria-hidden="true"><use href="#i-phone"/></svg>Demander un devis</a>
+          <a class="btn btn-ghost" href="#contact">Écrire</a>
+        </div>
+        <p class="status" data-status><span class="dot" aria-hidden="true"></span><span class="status-text">Du lundi au vendredi, 8&nbsp;h – 17&nbsp;h</span></p>
+      </div>
+      <figure class="hero-figure">
+        <svg class="hero-star" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg>
+        <img src="assets/photos/photo-01.jpg" width="1200" height="1600" fetchpriority="high" decoding="async"
+             alt="Cage d’escalier aux murs blanc et greige, rampe à croisillons blanche et marches en bois clair">
+      </figure>
+    </div>
+  </section>
+
+  <!-- Proof -->
+  <section class="proof" id="avis" aria-labelledby="avis-title">
+    <div class="container proof-grid">
+      <div class="score reveal">
+        <h2 class="kicker" id="avis-title">Avis Google</h2>
+        <p class="score-num" aria-hidden="true">5,0</p>
+        <span class="stars" role="img" aria-label="Note moyenne : 5 sur 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+        <p class="score-meta">Note moyenne sur <strong data-count="24">24</strong> avis Google</p>
+        <a class="link-arrow" href="https://www.google.com/maps/place/?q=place_id:ChIJLfPZQMw3lUcRNz0Bx_1ZPSM" target="_blank" rel="noopener">Voir les 24 avis sur Google<svg aria-hidden="true"><use href="#i-out"/></svg></a>
+      </div>
+      <figure class="featured reveal">
+        <blockquote><p>«&nbsp;Le nom de la société le dit, c’est une société 5&nbsp;étoiles.&nbsp;»</p></blockquote>
+        <figcaption>Olivier L.
+          <span class="stars" role="img" aria-label="5 étoiles sur 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="container rail-head">
+      <div>
+        <h3>Mot pour mot</h3>
+        <p>Quatre autres avis, sans retouche.</p>
+      </div>
+      <div class="rail-nav">
+        <button type="button" data-rail="-1" aria-label="Avis précédent" aria-controls="rail"><svg aria-hidden="true"><use href="#i-arrow-l"/></svg></button>
+        <button type="button" data-rail="1" aria-label="Avis suivant" aria-controls="rail"><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </div>
+    </div>
+    <ul class="rail" id="rail" tabindex="0" aria-label="Avis Google, faites défiler horizontalement">
+      <li class="review">
+        <div class="review-top"><p class="review-by"><span class="avatar" aria-hidden="true">E</span><span>Elena M.<time datetime="2026-05-08">mai 2026</time></span></p>
+          <span class="stars" role="img" aria-label="5 étoiles sur 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span></div>
+        <blockquote><p>Entreprise sérieuse et professionnelle. Travail de qualité, soigné et propre.<br>Fabio et Steve sont de bons conseils et très à l’écoute du client.<br>Je recommande vivement.</p></blockquote>
+      </li>
+      <li class="review">
+        <div class="review-top"><p class="review-by"><span class="avatar" aria-hidden="true">D</span><span>Da S.<time datetime="2025-07-22">juillet 2025</time></span></p>
+          <span class="stars" role="img" aria-label="5 étoiles sur 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span></div>
+        <blockquote><p>Entreprise fiable. Patron toujours présent, à l'écoute du client et prêt à aider dans n'importe quel circonstance ce qui est très rare de nos jours.</p></blockquote>
+      </li>
+      <li class="review">
+        <div class="review-top"><p class="review-by"><span class="avatar" aria-hidden="true">C</span><span>claude S.<time datetime="2025-07-19">juillet 2025</time></span></p>
+          <span class="stars" role="img" aria-label="5 étoiles sur 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span></div>
+        <blockquote><p>Travaux d'excellente qualité, Exécution soignée et précise<br>Très grande gentillesse, disponibilité et compétence du patron Fernando<br>Une entreprise comme on n'en trouve que rarement de nos jours. Tous les rendez vous et deadlines parfaitement respectés<br>A recommander absolument et avec grand plaisir pour nos futurs travaux<br>5 étoiles sans hésiter et largement méritées</p></blockquote>
+      </li>
+      <li class="review">
+        <div class="review-top"><p class="review-by"><span class="avatar" aria-hidden="true">C</span><span>Cravo D.<time datetime="2021-01-05">janvier 2021</time></span></p>
+          <span class="stars" role="img" aria-label="5 étoiles sur 5"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></span></div>
+        <blockquote><p>C’est la seule entreprise (et j’en ai vu passer beaucoup chez moi tout au long de ces années) qui a fais un travail irréprochable! Toute la rénovation de ma maison a été faite des sols aux plafonds avec les escaliers en bois. Conseils de rénovation avec les tendances actuelles, ouvriers soignées et de confiance, les délais ont étaient respectés et nous avons pu passer Noel tranquilles. Merci Etoile peinture, un grand merci à M. Fernando et son équipe!</p></blockquote>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Services -->
+  <section class="services" id="travaux" aria-labelledby="travaux-title">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="kicker">Travaux</p>
+        <h2 id="travaux-title">Du sol au plafond.</h2>
+        <p>Murs, sols, plafonds, finitions&nbsp;: une seule entreprise, pour une pièce ou pour toute la maison.</p>
+      </div>
+      <ol class="chips">
+        <li class="chip chip--chalk reveal">
+          <span class="chip-swatch" aria-hidden="true"><span class="no">01</span><span>Blanc craie</span></span>
+          <div class="chip-body"><h3>Peinture intérieure et extérieure</h3><p>Pièces de vie, cages d’escalier, façades.</p></div>
+        </li>
+        <li class="chip chip--greige reveal">
+          <span class="chip-swatch" aria-hidden="true"><span class="no">02</span><span>Greige</span></span>
+          <div class="chip-body"><h3>Revêtement mural</h3><p>Peinture et revêtements muraux, d’un mur à l’étage entier.</p></div>
+        </li>
+        <li class="chip chip--star reveal">
+          <span class="chip-swatch" aria-hidden="true"><span class="no">03</span><span>Jaune étoile</span></span>
+          <div class="chip-body"><h3>Décoration</h3><p>Teintes et finitions, avec des conseils «&nbsp;avec les tendances actuelles&nbsp;», note un client.</p></div>
+        </li>
+        <li class="chip chip--oak reveal">
+          <span class="chip-swatch" aria-hidden="true"><span class="no">04</span><span>Chêne</span></span>
+          <div class="chip-body"><h3>Revêtement de sols</h3><p>Les sols dans la foulée des murs, sans changer d’entreprise.</p></div>
+        </li>
+        <li class="chip chip--sky reveal">
+          <span class="chip-swatch" aria-hidden="true"><span class="no">05</span><span>Bleu ciel</span></span>
+          <div class="chip-body"><h3>Faux plafonds</h3><p>Pour abaisser, redresser ou rénover un plafond.</p></div>
+        </li>
+        <li class="chip chip--navy reveal">
+          <span class="chip-swatch" aria-hidden="true"><span class="no">06</span><span>Marine</span></span>
+          <div class="chip-body"><h3>Travaux de rénovation</h3><p>D’une pièce à la maison entière, «&nbsp;des sols aux plafonds&nbsp;», écrit un client.</p></div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Company -->
+  <section class="patron" id="entreprise" aria-labelledby="entreprise-title">
+    <svg class="patron-star" viewBox="0 0 24 24" aria-hidden="true"><use href="#i-star"/></svg>
+    <div class="container patron-grid">
+      <div class="reveal">
+        <p class="kicker">L’entreprise</p>
+        <h2 id="entreprise-title">Le patron vient voir le chantier.</h2>
+        <p class="body">Etoile Peinture est une S.à r.l. luxembourgeoise créée en janvier 2017 et dirigée par Fernando Pimentel. Dans les avis, les clients l’appellent par son prénom, et parlent d’une équipe qui tient ses délais.</p>
+        <dl class="ledger">
+          <div><dt>Gérant</dt><dd>Fernando Pimentel</dd></div>
+          <div><dt>Création</dt><dd>Janvier 2017</dd></div>
+          <div><dt>Siège</dt><dd>20 rue Marie-Thérèse, Bettembourg</dd></div>
+          <div><dt>Registre</dt><dd>RCS Luxembourg B211671</dd></div>
+        </dl>
+      </div>
+      <figure class="big-quote reveal">
+        <svg class="qmark" viewBox="0 0 64 48" aria-hidden="true"><path fill="currentColor" d="M0 48V30C0 13 8 3 24 0l3 7c-9 3-13 9-13 17h12v24zm36 0V30C36 13 44 3 60 0l3 7c-9 3-13 9-13 17h12v24z"/></svg>
+        <blockquote><p>Un patron qui vient encore contrôler régulièrement le travail de ses employés … un suivis de chantier professionnel.</p></blockquote>
+        <figcaption>Olivier L., avis Google</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Hours + location -->
+  <section class="visit" id="horaires" aria-labelledby="horaires-title">
+    <div class="container visit-grid">
+      <div class="reveal">
+        <p class="kicker">Horaires &amp; accès</p>
+        <h2 id="horaires-title">Le bureau est à Bettembourg.</h2>
+        <p class="status status-pill" data-status><span class="dot" aria-hidden="true"></span><span class="status-text">Du lundi au vendredi, 8&nbsp;h – 17&nbsp;h</span></p>
+        <table class="hours">
+          <caption class="visually-hidden">Horaires d’ouverture</caption>
+          <tbody>
+            <tr data-day="lundi"><th scope="row">Lundi</th><td>8&nbsp;h – 17&nbsp;h</td></tr>
+            <tr data-day="mardi"><th scope="row">Mardi</th><td>8&nbsp;h – 17&nbsp;h</td></tr>
+            <tr data-day="mercredi"><th scope="row">Mercredi</th><td>8&nbsp;h – 17&nbsp;h</td></tr>
+            <tr data-day="jeudi"><th scope="row">Jeudi</th><td>8&nbsp;h – 17&nbsp;h</td></tr>
+            <tr data-day="vendredi"><th scope="row">Vendredi</th><td>8&nbsp;h – 17&nbsp;h</td></tr>
+            <tr data-day="samedi" class="closed"><th scope="row">Samedi</th><td>Fermé</td></tr>
+            <tr data-day="dimanche" class="closed"><th scope="row">Dimanche</th><td>Fermé</td></tr>
+          </tbody>
+        </table>
+        <address class="address"><strong>Etoile Peinture S.à r.l.</strong>20 rue Marie-Thérèse<br>L-3257 Bettembourg, Luxembourg</address>
+        <div class="visit-actions">
+          <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=ETOILE%20PEINTURE%20S.A%20R.L.%2C%2020%20Rue%20Marie-Th%C3%A9r%C3%A8se%2C%203257%20Bettembourg" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-route"/></svg>Itinéraire</a>
+          <a class="btn btn-primary" href="tel:+35226510847"><svg aria-hidden="true"><use href="#i-phone"/></svg>Appeler</a>
+        </div>
+      </div>
+      <div class="map reveal">
+        <div class="map-frame">
+          <iframe src="https://www.google.com/maps?q=ETOILE%20PEINTURE%20S.A%20R.L.%2C%2020%20Rue%20Marie-Th%C3%A9r%C3%A8se%2C%203257%20Bettembourg&amp;output=embed"
+                  title="Carte : Etoile Peinture, 20 rue Marie-Thérèse, Bettembourg" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+        <a class="map-fallback" href="https://www.google.com/maps/place/?q=place_id:ChIJLfPZQMw3lUcRNz0Bx_1ZPSM" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Ouvrir dans Google Maps</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="container contact-grid">
+      <div class="reveal">
+        <p class="kicker">Devis</p>
+        <h2 id="contact-title">Parlez-nous de votre chantier.</h2>
+        <p class="intro">Les pièces, les surfaces, vos dates. Par téléphone en semaine de 8&nbsp;h à 17&nbsp;h, par e-mail à tout moment, avec une photo si vous le pouvez.</p>
+        <a class="big-phone" href="tel:+35226510847">+352 26 51 08 47</a>
+        <div class="contact-lines">
+          <a href="mailto:info@etoilepeinture.lu"><svg aria-hidden="true"><use href="#i-mail"/></svg>info@etoilepeinture.lu</a>
+          <a href="https://www.facebook.com/profile.php?id=100063022820261" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-fb"/></svg>Etoile Peinture sur Facebook</a>
+        </div>
+      </div>
+      <form class="mail-form reveal" id="devis-form" aria-labelledby="form-title">
+        <h3 id="form-title">Préparer une demande par e-mail</h3>
+        <div class="field-row">
+          <div class="field"><label for="f-name">Votre nom</label><input id="f-name" name="nom" autocomplete="name"></div>
+          <div class="field"><label for="f-town">Commune du chantier</label><input id="f-town" name="commune" autocomplete="address-level2"></div>
+        </div>
+        <div class="field">
+          <label for="f-type">Type de travaux</label>
+          <select id="f-type" name="travaux">
+            <option>Peinture intérieure et extérieure</option>
+            <option>Revêtement mural</option>
+            <option>Décoration</option>
+            <option>Revêtement de sols</option>
+            <option>Faux plafonds</option>
+            <option>Travaux de rénovation</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-msg">Votre projet</label><span class="hint" id="f-msg-hint">Pièces concernées, surfaces approximatives, dates souhaitées.</span><textarea id="f-msg" name="message" aria-describedby="f-msg-hint"></textarea></div>
+        <button class="btn btn-primary" type="submit"><svg aria-hidden="true"><use href="#i-mail"/></svg>Ouvrir dans ma messagerie</button>
+        <p class="form-note">Votre messagerie s’ouvre avec le message prêt, adressé à info@etoilepeinture.lu. Rien n’est envoyé sans vous.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="tricolore" aria-hidden="true"></div>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="wordmark" href="#main" aria-label="Etoile Peinture, haut de page"><span>Etoile</span><svg aria-hidden="true"><use href="#i-logo-star"/></svg><span>Peinture</span></a>
+        <p class="footer-tag">Peintre en bâtiment à Bettembourg. Peinture, murs, sols, faux plafonds et rénovation.</p>
+      </div>
+      <div class="footer-col">
+        <h2>Adresse</h2>
+        <address>20 rue Marie-Thérèse<br>L-3257 Bettembourg<br>Lun – ven, 8&nbsp;h – 17&nbsp;h</address>
+      </div>
+      <div class="footer-col">
+        <h2>Contact</h2>
+        <ul>
+          <li><a href="tel:+35226510847"><svg aria-hidden="true"><use href="#i-phone"/></svg>+352 26 51 08 47</a></li>
+          <li><a href="mailto:info@etoilepeinture.lu"><svg aria-hidden="true"><use href="#i-mail"/></svg>info@etoilepeinture.lu</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=100063022820261" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-fb"/></svg>Facebook</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <p>Etoile Peinture S.à r.l. · RCS Luxembourg B211671 · TVA LU29311740</p>
+      <p>© <span data-year>2026</span> Etoile Peinture</p>
+    </div>
+  </div>
+</footer>
+
+<nav class="action-bar" aria-label="Actions rapides">
+  <a href="tel:+35226510847"><svg aria-hidden="true"><use href="#i-phone"/></svg>Appeler</a>
+  <a href="mailto:info@etoilepeinture.lu?subject=Demande%20de%20devis"><svg aria-hidden="true"><use href="#i-mail"/></svg>E-mail</a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=ETOILE%20PEINTURE%20S.A%20R.L.%2C%2020%20Rue%20Marie-Th%C3%A9r%C3%A8se%2C%203257%20Bettembourg" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-route"/></svg>Itinéraire</a>
+</nav>
+
+<script>
+(() => {
+  const d = document, root = d.documentElement;
+  root.classList.add('js');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  d.querySelectorAll('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
+
+  // Header shadow on scroll
+  const header = d.querySelector('.site-header');
+  const onScroll = () => header.classList.toggle('is-scrolled', scrollY > 8);
+  addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  // Mobile menu
+  const btn = d.querySelector('.menu-btn'), menu = d.getElementById('menu');
+  const setMenu = open => {
+    btn.setAttribute('aria-expanded', open);
+    btn.setAttribute('aria-label', open ? 'Fermer le menu' : 'Ouvrir le menu');
+    menu.classList.toggle('is-open', open);
+    root.classList.toggle('lock', open);
+    if (open) menu.querySelector('a').focus({ preventScroll: true });
+  };
+  btn.addEventListener('click', () => setMenu(btn.getAttribute('aria-expanded') !== 'true'));
+  menu.addEventListener('click', e => { if (e.target.closest('a')) setMenu(false); });
+  d.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true') { setMenu(false); btn.focus(); }
+  });
+  matchMedia('(min-width: 960px)').addEventListener('change', e => { if (e.matches) setMenu(false); });
+
+  // Opening hours: live status in Luxembourg time
+  const HOURS = { lundi: '08:00–17:00', mardi: '08:00–17:00', mercredi: '08:00–17:00', jeudi: '08:00–17:00', vendredi: '08:00–17:00', samedi: 'Fermé', dimanche: 'Fermé' };
+  const DAYS = ['dimanche', 'lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi'];
+  const ranges = s => {
+    if (!s || /ferm/i.test(s)) return [];
+    if (/24\s*h|24\s*\/\s*24/i.test(s)) return [[0, 1440]];
+    return s.split(/,|;|\set\s/).map(p => {
+      const m = p.match(/(\d{1,2})\s*[:hH.]?\s*(\d{2})?\s*[–—-]\s*(\d{1,2})\s*[:hH.]?\s*(\d{2})?/);
+      if (!m) return null;
+      const a = m[1] * 60 + (+m[2] || 0); let b = m[3] * 60 + (+m[4] || 0);
+      if (b <= a) b += 1440;
+      return [a, b];
+    }).filter(Boolean);
+  };
+  const fmt = m => { m %= 1440; const h = Math.floor(m / 60), mi = m % 60; return h + ' h' + (mi ? ' ' + String(mi).padStart(2, '0') : ''); };
+  const now = () => {
+    const t = new Date();
+    try {
+      const p = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Luxembourg', weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }).formatToParts(t);
+      const g = k => p.find(x => x.type === k).value;
+      return { d: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(g('weekday')), t: (+g('hour') % 24) * 60 + +g('minute') };
+    } catch (e) { return { d: t.getDay(), t: t.getHours() * 60 + t.getMinutes() }; }
+  };
+  const status = ({ d: day, t }) => {
+    for (const [a, b] of ranges(HOURS[DAYS[day]])) {
+      if (t >= a && t < b) return { open: true, text: b - a >= 1440 ? 'Ouvert 24 h/24' : 'Ouvert maintenant · jusqu’à ' + fmt(b) };
+    }
+    for (const [, b] of ranges(HOURS[DAYS[(day + 6) % 7]])) {
+      if (b > 1440 && t < b - 1440) return { open: true, text: 'Ouvert maintenant · jusqu’à ' + fmt(b) };
+    }
+    for (let i = 0; i <= 7; i++) {
+      const name = DAYS[(day + i) % 7];
+      const starts = ranges(HOURS[name]).map(r => r[0]).filter(a => i > 0 || a > t).sort((x, y) => x - y);
+      if (starts.length) return { open: false, text: 'Fermé · ouvre ' + (i === 0 ? '' : i === 1 ? 'demain ' : name + ' ') + 'à ' + fmt(starts[0]) };
+    }
+    return { open: false, text: 'Fermé' };
+  };
+  const paint = () => {
+    const n = now(), s = status(n);
+    d.querySelectorAll('[data-status]').forEach(el => {
+      el.classList.toggle('is-open', s.open);
+      el.querySelector('.status-text').textContent = s.text;
+    });
+    d.querySelectorAll('.hours tr').forEach(tr => {
+      const today = tr.dataset.day === DAYS[n.d];
+      tr.classList.toggle('is-today', today);
+      const tag = tr.querySelector('.today-tag');
+      if (today && !tag) tr.querySelector('th').insertAdjacentHTML('beforeend', '<span class="today-tag">Aujourd’hui</span>');
+      if (!today && tag) tag.remove();
+    });
+  };
+  paint(); setInterval(paint, 60000);
+
+  // Review rail
+  const rail = d.getElementById('rail'), navBtns = d.querySelectorAll('[data-rail]');
+  const step = () => { const c = rail.querySelector('.review'); return c ? c.getBoundingClientRect().width + 16 : rail.clientWidth * .8; };
+  const sync = () => {
+    navBtns[0].disabled = rail.scrollLeft < 8;
+    navBtns[1].disabled = rail.scrollLeft + rail.clientWidth > rail.scrollWidth - 8;
+  };
+  navBtns.forEach(b => b.addEventListener('click', () => rail.scrollBy({ left: step() * +b.dataset.rail, behavior: reduce ? 'auto' : 'smooth' })));
+  rail.addEventListener('scroll', sync, { passive: true }); addEventListener('resize', sync); sync();
+
+  // Reveal + count-up
+  const counters = d.querySelectorAll('[data-count]');
+  if ('IntersectionObserver' in window && !reduce) {
+    const io = new IntersectionObserver((entries) => entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      en.target.classList.add('is-in'); io.unobserve(en.target);
+    }), { rootMargin: '0px 0px -8% 0px', threshold: .08 });
+    d.querySelectorAll('.reveal').forEach(el => io.observe(el));
+    const co = new IntersectionObserver((entries) => entries.forEach(en => {
+      if (!en.isIntersecting) return;
+      co.unobserve(en.target);
+      const el = en.target, end = +el.dataset.count, t0 = performance.now(), dur = 1100;
+      const tick = t => { const k = Math.min(1, (t - t0) / dur); el.textContent = Math.round(end * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(tick); };
+      requestAnimationFrame(tick);
+    }), { threshold: .6 });
+    counters.forEach(el => { el.textContent = '0'; co.observe(el); });
+  } else {
+    d.querySelectorAll('.reveal').forEach(el => el.classList.add('is-in'));
+  }
+
+  // Quote request: opens the visitor's mail app, nothing is posted
+  d.getElementById('devis-form').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = e.target, v = k => f.elements[k].value.trim();
+    const subject = 'Demande de devis – ' + v('travaux') + (v('commune') ? ' – ' + v('commune') : '');
+    const body = ['Bonjour,', '', 'Je souhaiterais un devis pour : ' + v('travaux') + (v('commune') ? ', à ' + v('commune') : '') + '.', '', v('message'), '', 'Bien cordialement,', v('nom')].join('\n');
+    location.href = 'mailto:info@etoilepeinture.lu?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  });
+})();
+</script>
+<!--sf:preview--><div style="padding:18px 16px;font:13px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;text-align:center;background:#0f0f10;color:#a3a3a8">Aperçu réalisé par Aymen Jallouli pour ETOILE PEINTURE S.A R.L. : ce site n'est pas encore le site officiel de l'établissement.</div><!--/sf:preview-->
+<!--sf:track--><script>(function(){try{var q=new URLSearchParams(location.search),r=q.get('r')||sessionStorage.getItem('sf_r');if(!r)return;sessionStorage.setItem('sf_r',r);navigator.sendBeacon("https://track.aymenjallouli.dev/t"+'?r='+encodeURIComponent(r)+'&p='+encodeURIComponent(location.pathname));}catch(e){}})();</script><!--/sf:track-->
+</body>
+</html>
